@@ -1,0 +1,142 @@
+<!-- INCIO DE CARRUSEL -->
+<style>
+  #carrusel {
+    width: 100vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .carruselImagen {
+    flex-shrink: 0;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+  }
+
+  #carruselContenido {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    left: -100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  #carruselLeft {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+
+  #carruselRight {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-225deg);
+    cursor: pointer;
+  }
+
+  #carruselLeft:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselRight:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselInfo {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carruselTitulo {
+    font-family: var(--mainFont);
+    font-size: 5.5vh;
+    color: var(--secondaryColor);
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  #carruselTexto {
+    font-family: var(--otherFont);
+    font-size: 2.5vh;
+    color: black;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <!-- FIN DE CAMBIO -->
+  <div id="carrusel">
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen0"
+      class="carruselImagen"
+      src="https://i.ytimg.com/vi/sz4mD8kBnGY/maxresdefault.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen1"
+      class="carruselImagen"
+      src="https://www.gpekix.org/sites/default/files/styles/image_style_800_650_/public/Blogs/the_teacher_helps_a_group_of_students._hidassie_school._addis_ababa_ethiopia_3_0.jpg?itok=uvUro5e6"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen2"
+      class="carruselImagen"
+      src="https://www.unicef.org/mexico/sites/unicef.org.mexico/files/styles/hero_extended/public/Andy%20Richter%20ZinacantanEscuelaPrimeria%20%2814%29.jpg.webp?itok=R7X8BVgg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <div id="carruselContenido">
+      <div id="carruselLeft" onclick="changeImage(-1)"></div>
+      <div id="carruselInfo">
+        <!-- CAMBIAR AQUI: Cambiar Titulo y Texto -->
+        <div id="carruselTitulo">¿Por qué es importante?</div>
+        <div id="carruselTexto">
+          La educacion de calidad es un monumento clave para romper el ciclo de la pobreza. Permite a los individuos desarrollar sus atributos y habilidad para alcanzar su maximo potencial. Sus beneficios van mas alla de lo individual y es uno de los componentes basicos de una sociedad exitosa. La educacion de calidad reduce las desigualdades y promueve avanzar hacia la igualdad de genero.
+        </div>
+        <!-- FIN DE CAMBIO -->
+      </div>
+      <div id="carruselRight" onclick="changeImage(1)"></div>
+    </div>
+  </div>
+</div>
+<script>
+  var image1 = document.getElementById("imagen0");
+  var image2 = document.getElementById("imagen1");
+  var image3 = document.getElementById("imagen2");
+
+  var currentImage = 0;
+
+  document.getElementById("imagen0").style.display = "flex";
+
+  function changeImage(num) {
+    image1.style.display = "none";
+    image2.style.display = "none";
+    image3.style.display = "none";
+
+    currentImage = (3 + (currentImage + num)) % 3;
+
+    document.getElementById("imagen" + currentImage).style.display = "flex";
+  }
+</script>
+<!-- FIN DE CARRUSEL -->

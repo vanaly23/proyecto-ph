@@ -1,0 +1,68 @@
+<!-- INICIO DE ENCABEZADO -->
+<style>
+  #encabezado {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  #titulo {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  #nombre {
+    font-family: var(--mainFont);
+    font-size: 4vh;
+    color: var(--mainColor);
+    margin-left: 1vw;
+  }
+
+  #menu {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .boton {
+    height: 6vh;
+    min-width: calc(6vh * 2.5);
+    font-size: 3vh;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    font-family: var(--otherFont);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .boton:hover {
+    color: var(--thirdColor);
+  }
+</style>
+<div id="encabezado">
+  <div id="titulo">
+    <img height="80%" src="plantilla-inicial-archivos/desarollosos.png" />
+    <!-- CAMBIAR AQUI: Cambiar 'Nombre de Proyecto' por el nombre de su Meta-->
+    <div id="nombre">Educacion de Calidad</div>
+    <!-- FIN DE CAMBIO -->
+  </div>
+  <div id="menu">
+    <!-- CAMBIAR AQUI: Cambiar el Texto de los Botones ('Boton 1' etc.) y la cantidad de Botones -->
+    <a href="#seccion1" class="boton">¿Por qué es importante?</a>
+    <a href="#seccion2" class="boton">Progreso</a>
+    <a href="#seccion3" class="boton">Temeke Youth Development Network</a>
+    <!-- FIN DE CAMBIO -->
+  </div>
+</div>
+<!-- FIN DE ENCABEZADO -->

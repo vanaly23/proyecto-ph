@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CAMBIAR AQUI: Cambiar a Titulo de Proyecto -->
+    <title>Educacion de Calidad</title>
+    <!-- FIN DE CAMBIO -->
+    <link
+      rel="shortcut icon"
+      href="plantilla-inicial-archivos/desarollosos.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="plantilla-inicial-archivos/desarollosos.png"
+      type="image/x-icon"
+    />
+    <style>
+      /* CAMBIAR AQUI (OPCIONAL): Pueden Importar Fuentes Distintas*/
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+      /* FIN DE CAMBIO */
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        overflow-y: overlay;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        /* CAMBIAR AQUI (OPCIONAL): Pueden Cambiar los colores usando Hex Values y las Fuentes (deben corresponder a sus importes)*/
+        --mainColor: #2693d1;
+        --secondaryColor: #a4183d;
+        --thirdColor: #417f3d;
+        --mainFont: "Oswald", sans-serif;
+        --otherFont: "Open Sans", sans-serif;
+        /* FIN DE CAMBIO */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CAMBIAR AQUI: LLENAR DE COSAS -->
+    <!-- INICIO DE ENCABEZADO -->
+<style>
+  #encabezado {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  #titulo {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  #nombre {
+    font-family: var(--mainFont);
+    font-size: 3vh;
+    color: var(--mainColor);
+    margin-left: 1vw;
+  }
+
+  #menu {
+    height: 8vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .boton {
+    height: 6vh;
+    min-width: calc(6vh * 2.5);
+    font-size: 2vh;
+    color: var(--secondaryColor);
+    font-weight: 400;
+    font-family: var(--otherFont);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .boton:hover {
+    color: var(--thirdColor);
+  }
+</style>
+<div id="encabezado">
+  <div id="titulo">
+    <img height="80%" src="plantilla-inicial-archivos/desarollosos.png" />
+    <!-- CAMBIAR AQUI: Cambiar 'Nombre de Proyecto' por el nombre de su Meta-->
+    <div id="nombre">Educacion de Calidad</div>
+    <!-- FIN DE CAMBIO -->
+  </div>
+  <div id="menu">
+    <!-- CAMBIAR AQUI: Cambiar el Texto de los Botones ('Boton 1' etc.) y la cantidad de Botones -->
+    <a href="#seccion1" class="boton">Por que es importante?</a>
+    <a href="#seccion2" class="boton">Progreso</a>
+    <a href="#seccion3" class="boton">Temeke Youth Development Network</a>
+    <!-- FIN DE CAMBIO -->
+  </div>
+</div>
+<!-- FIN DE ENCABEZADO -->
+<!-- INCIO DE CARRUSEL -->
+<style>
+  #carrusel {
+    width: 100vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .carruselImagen {
+    flex-shrink: 0;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+  }
+
+  #carruselContenido {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    left: -100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  #carruselLeft {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-45deg);
+    cursor: pointer;
+  }
+
+  #carruselRight {
+    height: 7.5%;
+    aspect-ratio: 1;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: rotate(-225deg);
+    cursor: pointer;
+  }
+
+  #carruselLeft:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselRight:hover {
+    border-top: 3px solid var(--secondaryColor);
+    border-left: 3px solid var(--secondaryColor);
+  }
+
+  #carruselInfo {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #carruselTitulo {
+    font-family: var(--mainFont);
+    font-size: 5.5vh;
+    color: var(--secondaryColor);
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  #carruselTexto {
+    font-family: var(--otherFont);
+    font-size: 2.5vh;
+    color: black;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <!-- FIN DE CAMBIO -->
+  <div id="carrusel">
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen0"
+      class="carruselImagen"
+      src="https://i.ytimg.com/vi/sz4mD8kBnGY/maxresdefault.jpg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen1"
+      class="carruselImagen"
+      src="https://www.gpekix.org/sites/default/files/styles/image_style_800_650_/public/Blogs/the_teacher_helps_a_group_of_students._hidassie_school._addis_ababa_ethiopia_3_0.jpg?itok=uvUro5e6"
+    />
+    <!-- FIN DE CAMBIO -->
+    <!-- CAMBIAR AQUI: cambiar el 'src' al enlace de la imagen -->
+    <img
+      id="imagen2"
+      class="carruselImagen"
+      src="https://www.unicef.org/mexico/sites/unicef.org.mexico/files/styles/hero_extended/public/Andy%20Richter%20ZinacantanEscuelaPrimeria%20%2814%29.jpg.webp?itok=R7X8BVgg"
+    />
+    <!-- FIN DE CAMBIO -->
+    <div id="carruselContenido">
+      <div id="carruselLeft" onclick="changeImage(-1)"></div>
+      <div id="carruselInfo">
+        <!-- CAMBIAR AQUI: Cambiar Titulo y Texto -->
+        <div id="carruselTitulo">Por que es importante?</div>
+        <div id="carruselTexto">
+          La educacion de calidad es un monumento clave para romper el ciclo de la pobreza. Permite a los individuos desarrollar sus atributos y habilidad para alcanzar su maximo potencial. Sus beneficios van mas alla de lo individual y es uno de los componentes basicos de una sociedad exitosa. La educacion de calidad reduce las desigualdades y promueve avanzar hacia la igualdad de genero.
+        </div>
+        <!-- FIN DE CAMBIO -->
+      </div>
+      <div id="carruselRight" onclick="changeImage(1)"></div>
+    </div>
+  </div>
+</div>
+<script>
+  var image1 = document.getElementById("imagen0");
+  var image2 = document.getElementById("imagen1");
+  var image3 = document.getElementById("imagen2");
+
+  var currentImage = 0;
+
+  document.getElementById("imagen0").style.display = "flex";
+
+  function changeImage(num) {
+    image1.style.display = "none";
+    image2.style.display = "none";
+    image3.style.display = "none";
+
+    currentImage = (3 + (currentImage + num)) % 3;
+
+    document.getElementById("imagen" + currentImage).style.display = "flex";
+  }
+</script>
+<!-- FIN DE CARRUSEL -->
+<!-- INICIO DE SECCION IZQUIERDA -->
+<style>
+  .izquierda {
+    width: 100vw;
+    min-height: 75vh;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+
+  .izquierdaLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izquierdaTitulo {
+    font-family: var(--mainFont);
+    color: var(--thirdColor);
+    font-size: 4.5vh;
+    max-width: 80%;
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  .izquierdaTexto {
+    font-family: var(--otherFont);
+    color: black;
+    font-size: 2.5vh;
+    max-width: 80%;
+  }
+
+  .izquierdaRight {
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .izquierdaImagen {
+    width: 80%;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <div class="izquierda">
+    <div class="izquierdaLeft">
+      <!-- CAMBIAR AQUI: Cambiar el Titulo y el Texto -->
+      <div class="izquierdaTitulo">Progreso</div>
+      <div class="izquierdaTexto">
+        El mundo ha tenido grandes avances, sin embargo, aun queda mucho por hacer y por logra. La matricula en la educacion primaria, ha alcanzado el 91% en los paises en vias de desarollo pero todavia hay 57 millones de ninos fuera del sistema educativo. En estos paises, uno de cada cuatro ninos no concurre a las escuela, 103 millones de jovenes carecen basicas de alfabetizacion y 6 de cada 10 jovenes no alcanza el nivel minimo aceptable en matematicas y lectura. 
+      </div>
+      <!-- FIN DE CAMBIO -->
+    </div>
+    <div class="izquierdaRight">
+      <img
+        class="izquierdaImagen"
+        src="https://pbs.twimg.com/media/FDeCFyOUUAQ84tg?format=jpg&name=medium"
+      />
+    </div>
+  </div>
+</div>
+<!-- FIN DE CAMBIO -->
+<!-- FIN DE SECCION IZQUIERDA -->
+
+<!-- INICIO DE SECCION DERECHA -->
+<style>
+  .derecha {
+    width: 100vw;
+    min-height: 75vh;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+  }
+
+  .derechaRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .derechaTitulo {
+    font-family: var(--mainFont);
+    color: var(--secondaryColor);
+    font-size: 4.5vh;
+    max-width: 80%;
+    margin-bottom: 4vh;
+    text-align: center;
+  }
+
+  .derechaTexto {
+    font-family: var(--otherFont);
+    color: black;
+    font-size: 2.5vh;
+    max-width: 80%;
+  }
+
+  .derechaLeft {
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .derechaImagen {
+    width: 80%;
+  }
+</style>
+<!-- CAMBIAR AQUI: Cambiar X por el número de su sección -->
+<div id="seccionX">
+  <div class="derecha">
+    <div class="derechaLeft">
+      <img
+        class="derechaImagen"
+        src="https://i.ytimg.com/vi/MEWlRIdVWF8/maxresdefault.jpg"
+      />
+    </div>
+    <div class="derechaRight">
+      <!-- CAMBIAR AQUI: Cambiar el Titulo y el Texto -->
+      <div class="derechaTitulo">Temeke Youth Development Network</div>
+      <div class="derechaTexto">
+        En el Dia de las Buenas Acciones la Temeke Youth Development Network (Red Temeke para el Desarollo Juvenil) llevo a cabo un proyecto sobre educacion de calidad para jovenes. Durante varios dias tuvieron actividades donde les ensenaron sobre emprendedurismo como un medio para mejorar sus habilidades de negociacion, el establecimiento de objetivos, elevar su conciencia y para que aprendan a indentificar y aprovechar las oportunidades que se les presentan en la vida. <br/> <br/> En esta actividad, los capacitaron tambien para aplicar al Fondo Municipal Temeke para la Juventud que da capital semilla para ideas de negocio.
+      </div>
+      <!-- FIN DE CAMBIO -->
+    </div>
+  </div>
+</div>
+<!-- FIN DE CAMBIO -->
+<!-- FIN DE SECCION DERECHA -->
+<!-- INICIO DE PIE -->
+<style>
+  #pieDePagina {
+    width: 100vw;
+    height: 30vh;
+    background: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .pieDePaginaTexto {
+    font-family: var(--otherFont);
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+  }
+</style>
+<div id="pieDePagina">
+  <img
+    width="5%"
+    src="https://beautifulpatterns.org/assets/img/logos/Patrones-Hermosos-1.png"
+  />
+  <!-- CAMBIAR AQUI: Cambiar los "Nombre"s por sus nombres -->
+  <div class="pieDePaginaTexto">
+    Proyecto Final hecho por Nikol y Vannaly.
+  </div>
+  <!-- FIN DE CAMBIO -->
+  <div class="pieDePaginaTexto">
+    Creado orgullosamente para Patrones Hermosos 2024 <br />
+    en el Campus Bonaterra de la Universidad Panamericana
+  </div>
+</div>
+<!-- FIN DE PIE -->
+
+    <!-- FIN DE CAMBIO -->
+  </body>
+</html>
